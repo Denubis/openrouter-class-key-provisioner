@@ -9,3 +9,24 @@ dependencies = [
     "rich>=14.1.0",
     "rich-click>=1.8.9",
 ]
+
+[dependency-groups]
+dev = [
+    "bandit>=1.9.4",
+    "pre-commit>=4.5.1",
+    "ruff>=0.15.4",
+    "ty>=0.0.19",
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 120
+exclude = ["demo"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM", "S"]
+ignore = ["S603", "S607"]  # subprocess calls — not relevant here
+
+[tool.bandit]
+exclude_dirs = [".venv", "demo"]
+skips = ["B603", "B607"]  # subprocess — not relevant
