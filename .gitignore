@@ -12,6 +12,9 @@ wheels/
 # Secrets and environment
 .envrc
 
+# Claude Code
+.claude/
+
 # Data files (contain PII and API keys)
 *.csv
 keys.db
