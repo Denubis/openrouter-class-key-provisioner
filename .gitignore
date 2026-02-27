@@ -9,6 +9,12 @@ wheels/
 # Virtual environments
 .venv
 
-*.csv
+# Secrets and environment
+.envrc
 
+# Data files (contain PII and API keys)
+*.csv
 keys.db
+
+# LibreOffice lock files
+.~lock.*
